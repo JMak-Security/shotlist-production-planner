@@ -1,0 +1,13 @@
+shot_id,scene_id,location,setup,cast_ids,estimated_minutes,notes
+SHOT_001,SCENE_01,Studio_A,Desk_Wide,CAST_01;CAST_02,45,Synthetic estimate for sample use
+SHOT_002,SCENE_01,Studio_A,Desk_Close,CAST_01,30,Synthetic estimate for sample use
+SHOT_003,SCENE_02,Studio_B,Doorway,CAST_02;CAST_03,50,Synthetic estimate for sample use
+SHOT_004,SCENE_02,Studio_B,Doorway,CAST_02,35,Synthetic estimate for sample use
+SHOT_005,SCENE_03,Studio_A,Desk_Wide,CAST_01;CAST_03,40,Synthetic estimate for sample use
+SHOT_006,SCENE_03,Studio_A,Window_Side,CAST_03,55,Synthetic estimate for sample use
+SHOT_007,SCENE_04,Exterior_Set,Entry_Wide,CAST_01;CAST_02,45,Synthetic estimate for sample use
+SHOT_008,SCENE_04,Exterior_Set,Entry_Close,CAST_02,30,Synthetic estimate for sample use
+SHOT_009,SCENE_05,Studio_B,Doorway,CAST_01;CAST_03,40,Synthetic estimate for sample use
+SHOT_010,SCENE_05,Studio_B,Corridor,CAST_01,50,Synthetic estimate for sample use
+SHOT_011,SCENE_06,Studio_A,Window_Side,CAST_02;CAST_03,35,Synthetic estimate for sample use
+SHOT_012,SCENE_06,Exterior_Set,Entry_Wide,CAST_01,45,Synthetic estimate for sample use

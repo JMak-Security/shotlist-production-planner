@@ -1,0 +1,17 @@
+services:
+  shotlist:
+    build: .
+    command:
+      ["plan", "/input/sample_shot_list.csv", "--output", "/export/${SHOTLIST_OUTPUT_NAME:-sample-plan}"]
+    user: "10001:10001"
+    read_only: true
+    network_mode: none
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=32m
+    volumes:
+      - ./samples/sample_shot_list.csv:/input/sample_shot_list.csv:ro
+      - ./output:/export
