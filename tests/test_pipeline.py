@@ -63,6 +63,20 @@ def test_rejects_invalid_input_and_existing_output_before_writing(tmp_path: Path
         run_plan(valid_source, existing, PlanOptions(time(8, 0), 480, 15))
 
 
+def test_rejects_symlinked_output_path(tmp_path: Path) -> None:
+    source = _input(tmp_path / "shots.csv")
+    target = tmp_path / "target"
+    output = tmp_path / "out-link"
+    try:
+        output.symlink_to(target, target_is_directory=True)
+    except OSError:
+        pytest.skip("symlink creation is not permitted")
+
+    with pytest.raises(ValueError, match="must not be a symlink"):
+        run_plan(source, output, PlanOptions(time(8, 0), 480, 15))
+    assert not target.exists()
+
+
 def test_cleans_staging_directory_when_atomic_rename_fails(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
